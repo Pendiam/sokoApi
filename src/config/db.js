@@ -4,8 +4,8 @@ const { Sequelize } = require("sequelize");
 const sequelize = new Sequelize({
   dialect: "sqlite",
   storage: "./sokoDB.sqlite",
-  logging: console.log, // For debugging
+  logging: false,
+  // logging: console.log, // For debugging
 });
-
 
 module.exports = sequelize;

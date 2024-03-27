@@ -15,9 +15,7 @@ exports.createUser = async (req, res) => {
 
     // Validation: Check if email is valid
     if (!isValidEmail(email)) {
-      return res
-        .status(400)
-        .json({ error: "The user email is invalid" });
+      return res.status(400).json({ error: "The user email is invalid" });
     }
 
     // create a new user in the database
@@ -27,7 +25,7 @@ exports.createUser = async (req, res) => {
     const newUser = sanitizeUser(user);
     res.status(201).json(newUser);
   } catch (error) {
-    console.error("Error creating user:", error);
+    // console.error("Error creating user:", error);
 
     if (error.name === "SequelizeUniqueConstraintError") {
       return res

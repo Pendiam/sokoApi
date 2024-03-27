@@ -50,10 +50,12 @@ Middleware Integration: Utilizing middleware functions to execute tasks such as 
 
 Before starting, ensure you have the following installed on your system:
 
-- Node.js:  [Download and install Node.js](https://nodejs.org/)
+- **Node.js:**  [Download and install Node.js](https://nodejs.org/)
 
-- Yarn: [Install Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
-- Git: [Download and iInstall Git](https://git-scm.com/downloads)
+- **Yarn:** [Install Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
+- **Git:** [Download and iInstall Git](https://git-scm.com/downloads)
+
+- **Visual Studio Code:** [Download and install VS Code](https://code.visualstudio.com/download)
 
 ### Getting Started
 
@@ -91,7 +93,7 @@ To use the SokoAPI backend in your development environment, follow these steps:
      Ensure that you have configured the necessary environment variables such as database connection strings, API keys, and any other configuration required by the application. You may utilize a .env file for managing these variables. See [.env example](sampleEnv.txt).
 
 2. **Starting the Server**
-    Run the following command to start the server locally:
+    Run the following command to start the development server locally:
 
     ```bash
     yarn dev
@@ -101,7 +103,9 @@ To use the SokoAPI backend in your development environment, follow these steps:
 
 3. **Testing Endpoints**
     After starting the server, you can test the API endpoints by sending HTTP requests to the appropriate routes.
-    You can access the API endpoints using tools like [Postman](https://www.postman.com/downloads/) or [Insomnia](https://insomnia.rest/download), or by integrating them into your frontend application. Refer to the documentation or codebase for a list of available endpoints and their functionalities.
+    You can access the API endpoints using tools like [Postman](https://www.postman.com/downloads/) or [Insomnia](https://insomnia.rest/download), or by integrating them into your frontend application.
+
+    Run the sample [frontend](./web/index.html) using the [Live Server extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 
 ## Contributing
 
