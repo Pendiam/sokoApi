@@ -11,8 +11,9 @@
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
+    "express": "^4.19.2",
     "jsonwebtoken": "^8.5.1",
+    "pg": "^8.11.5",
     "sequelize": "^6.37.1",
     "sqlite3": "^5.1.7"
   },
@@ -20,7 +21,7 @@
     "nodemon": "^3.1.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   }
 }

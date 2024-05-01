@@ -16,7 +16,10 @@ const corsOptions = {
 app.use(express.json()); // Parse JSON requests
 app.use(cors(corsOptions)); // Enable CORS with options
 
+app.use(express.static("web"));
+
 // Routes
+app.use("/", routes);
 app.use("/api", routes);
 
 // Start server

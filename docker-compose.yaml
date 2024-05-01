@@ -1,0 +1,46 @@
+version: "3.9"
+
+services:
+  soko-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - IMAGE_TAG=soko-api:latest
+    image: peter254/soko-api:latest
+    container_name: soko-api
+    ports:
+      - "5000:5000"
+    restart: on-failure
+    depends_on:
+      - soko-db
+    volumes:
+      - .:/app
+    networks:
+      - soko-network
+
+  soko-db:
+    build:
+      context: ./docker/postgresql
+      dockerfile: Dockerfile
+      args:
+        - IMAGE_TAG=soko-db:latest
+    image: peter254/soko-db:latest
+    container_name: soko-db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - .env
+    networks:
+      - soko-network
+
+networks:
+  soko-network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+   
+    
