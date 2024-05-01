@@ -5,7 +5,7 @@ FROM node:latest
 WORKDIR /app
 
 # Copy initial files to working directory
-COPY package.json ./
+COPY package.json .env ./
 
 # install application dependencies
 RUN yarn

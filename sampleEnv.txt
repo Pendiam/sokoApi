@@ -1,4 +1,3 @@
-
 APP_PORT=5000
 APP_NAME="Soko App"
 APP_VERSION="1.0.0"
@@ -6,7 +5,7 @@ ORIGINS=["http://localhost:3000", "http://127.0.0.1:5500"]
 
 
 # Database
-POSTGRES_HOST=localhost
+POSTGRES_HOST=soko-db
 POSTGRES_PORT=5432
 POSTGRES_DB=sokoApp
 POSTGRES_USER=root
